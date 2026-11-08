@@ -2,20 +2,20 @@
   "name": "Cineflix - Free HD Movies & TV Shows",
   "short_name": "Cineflix",
   "description": "Stream and download free HD movies and TV shows on your Android device with Cineflix.",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0d0e12",
   "theme_color": "#e50914",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "icons/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
@@ -26,26 +26,26 @@
       "name": "Trending Movies",
       "short_name": "Trending",
       "description": "View what's currently trending on Cineflix",
-      "url": "/trending.html",
-      "icons": [{ "src": "/icons/shortcut-trending.png", "sizes": "96x96" }]
+      "url": "trending.html",
+      "icons": [{ "src": "icons/shortcut-trending.png", "sizes": "96x96", "type": "image/png" }]
     },
     {
       "name": "Search",
       "short_name": "Search",
       "description": "Search for your favorite movies or TV shows",
-      "url": "/search.html",
-      "icons": [{ "src": "/icons/shortcut-search.png", "sizes": "96x96" }]
+      "url": "search.html",
+      "icons": [{ "src": "icons/shortcut-search.png", "sizes": "96x96", "type": "image/png" }]
     },
     {
       "name": "My Watchlist",
       "short_name": "Watchlist",
       "description": "Access your downloaded and saved titles",
-      "url": "/watchlist.html",
-      "icons": [{ "src": "/icons/shortcut-watchlist.png", "sizes": "96x96" }]
+      "url": "watchlist.html",
+      "icons": [{ "src": "icons/shortcut-watchlist.png", "sizes": "96x96", "type": "image/png" }]
     }
   ],
   "share_target": {
-    "action": "/share-handler.html",
+    "action": "share-handler.html",
     "method": "GET",
     "params": {
       "title": "name",
