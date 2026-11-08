@@ -20,5 +20,37 @@
       "sizes": "512x512",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Trending Movies",
+      "short_name": "Trending",
+      "description": "View what's currently trending on Cineflix",
+      "url": "/trending.html",
+      "icons": [{ "src": "/icons/shortcut-trending.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Search",
+      "short_name": "Search",
+      "description": "Search for your favorite movies or TV shows",
+      "url": "/search.html",
+      "icons": [{ "src": "/icons/shortcut-search.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "My Watchlist",
+      "short_name": "Watchlist",
+      "description": "Access your downloaded and saved titles",
+      "url": "/watchlist.html",
+      "icons": [{ "src": "/icons/shortcut-watchlist.png", "sizes": "96x96" }]
+    }
+  ],
+  "share_target": {
+    "action": "/share-handler.html",
+    "method": "GET",
+    "params": {
+      "title": "name",
+      "text": "description",
+      "url": "link"
+    }
+  }
 }
