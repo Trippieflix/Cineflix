@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Cineflix APK Download - Free HD Movies & TV Shows for Android</title>
+    <style>
+        :root {
+            --bg-color: #0d0e12;
+            --card-bg: #16181f;
+            --accent-color: #e50914;
+            --accent-hover: #f40612;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+            --border-color: #272a33;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 6%;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(13, 14, 18, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--accent-color);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 70px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 620px;
+        }
+
+        .download-btn {
+            background-color: var(--accent-color);
+            color: var(--text-main);
+            padding: 18px 40px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 35px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s, transform 0.15s;
+            box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .download-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .file-info {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 14px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .step-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .step-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.2s ease;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Cineflix</div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" style="border-top: none;">
+            <h1>Stream & Download Free <span>HD Movies & TV Shows</span></h1>
+            <p>Get the ultimate cinematic streaming app for Android. High-speed servers, complete offline viewing, and zero subscription costs.</p>
+            
+            <a href="download/cineflix.apk" class="download-btn" id="downloadBtn">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Download Cineflix APK (v5.4)
+            </a>
+            
+            <div class="file-info">
+                <span><strong>Requires:</strong> Android 5.0+</span>
+                <span>&bull;</span>
+                <span><strong>Size:</strong> 46.8 MB</span>
+                <span>&bull;</span>
+                <span><strong>Updated:</strong> Today</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section>
+            <h2 class="section-title">Why Choose Cineflix?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎬 Massive Library</h3>
+                    <p>Access thousands of Hollywood blockbusters, independent masterpieces, and trending weekly TV series.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ HD Streaming</h3>
+                    <p>Enjoy buffer-free playback in multiple resolutions ranging from standard clarity up to 1080p Full HD.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📥 Offline Viewing</h3>
+                    <p>Download movies and episodes directly to your local device storage to watch anytime without an internet connection.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🆓 100% Free Access</h3>
+                    <p>No monthly subscription fees, credit card requirements, or locked premium walls.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Guide Section -->
+        <section>
+            <h2 class="section-title">How to Install Cineflix APK</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h4>Download APK File</h4>
+                    <p>Tap the download button above to get the latest signed APK package directly.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h4>Allow Unknown Sources</h4>
+                    <p>Go to your phone <strong>Settings > Security</strong> and enable installation from unknown sources.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h4>Install & Open</h4>
+                    <p>Locate the downloaded file in your file manager, tap it, and complete the setup.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is Cineflix completely free to use?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Yes! Cineflix is entirely free. You don't need to purchase any subscription plans or log into a paid account to watch or download content.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I cast movies to my Smart TV?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, Cineflix includes built-in casting support allowing you to stream videos directly to your Chromecast, Android TV, or supported Smart TVs.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is the app safe for my Android device?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Absolutely. The APK file is scanned and verified for security prior to release to ensure a safe, clean installation process.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cineflix App. Disclaimer: This platform is provided for promotional and informational use. All trademarks and media belong to their respective creators.</p>
+    </footer>
+
+    <script>
+        // FAQ Accordion Toggle Script
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Download Action Hook
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            console.log('Cineflix APK download link initiated.');
+        });
+    </script>
+</body>
+</html>
